@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Current Time</title>
+	</head>
+	<body>
+		<h1>Current Time</h1>
+		
+		<form action="." method="POST" onsubmit="event.preventDefault(); show_time();">
+			
+			<label for="continent">Select continent: </label>
+			<select name="region" id="continent" onchange="getCities();">
+				<option value="Africa">Africa</option>
+				<option value="America">America</option>
+				<option value="Asia">Asia</option>
+				<option value="Europe">Europe</option>
+				<option value="Pacific">Pacific</option>
+			</select>
+			
+			<label for="city">Select city: </label>
+			<select name="city" id="city" disabled></select>
+			
+			<button>Show</button>
+			
+		</form>
+		
+		<p id="result"></p>
+		
+		<script src="script.js"></script>
+	</body>
+</html>
+		
