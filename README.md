@@ -1,1 +1,0 @@
-# gunlukcu22.github.io
