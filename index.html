@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Current Time</title>
+		<title>Semih Günlükçü's CV</title>
+		<link rel="icon" type="image" href="favicon.png">
+		<link rel="stylesheet" href="rules.css">
 	</head>
 	<body>
-		<h1>Current Time</h1>
-		
-		<form action="." method="POST" onsubmit="event.preventDefault(); show_time();">
-			
-			<label for="continent">Select continent: </label>
-			<select name="region" id="continent" onchange="getCities();">
-				<option value="Africa">Africa</option>
-				<option value="America">America</option>
-				<option value="Asia">Asia</option>
-				<option value="Europe">Europe</option>
-				<option value="Pacific">Pacific</option>
-			</select>
-			
-			<label for="city">Select city: </label>
-			<select name="city" id="city" disabled></select>
-			
-			<button>Show</button>
-			
-		</form>
-		
-		<p id="result"></p>
-		
-		<script>
-		
-			let regionElement = document.getElementById('continent');
-			let cityElement = document.getElementById('city');
-
-			async function getCities() {
-
-				let url = "http://uyar.pythonanywhere.com/cities?region=" + regionElement.value;
-
-				let response = await fetch(url);
-
-				let result = await response.text();
-
-				cityElement.innerHTML = result;
-				cityElement.disabled = false;
-			}
-
-			async function show_time() {
-				let url = "https://uyar.pythonanywhere.com/time?zone=" + cityElement.value
-
-				let response = await fetch(url);
-				let result = await response.text();
-
-				document.getElementById('result').innerHTML = result;
-
-			}
-		</script>
+		<a href="#Personal Information" > Personal Information </a>-
+		<a href="#Education" > Education </a>-
+		<a href="#Skills" > Skills </a>-
+		<a href="#Languages" > Languages </a>-
+		<a href="#Hobbies" > Hobbies </a>
+		<h1>Semih Günlükçü's Resume</h1>
+			<h3>Student</h3>
+				<img src="myphoto.png" alt="My Picture" width="200">
+			<h2 id="Personal Information" >Personal Information</h2>
+				<p>
+					<b>Address:</b> Ayazaga/Istanbul
+					<br><b>Contact Number:</b> (+90)555 555 55 55
+					<br><b>E-mail:</b> gunlukcu22@itu.edu.tr
+					<br><b>GitHub:</b> <a href="https://github.com/itu-itis22-gunlukcu22/"> https://github.com/itu-itis22-gunlukcu22 </a>
+		<h2 id="Education" >Education</h2>
+		<table>
+			<tr>
+				<th>School</th>
+				<th>Department</th>
+				<th>Year</th>
+			</tr>
+			<tr>
+				<td>Istanbul Technical University</td>
+				<td>Computer Engineering</td>
+				<td>2022-present(2026 estimated)</td>
+			</tr>
+		</table>
+		<div>
+			<h3>Courses that I am taking</h3>
+			<ol>
+				<li>BLG 101E - Introduction to Information Systems</li>
+				<li>FIZ 101E - Physics 1</li>
+				<li>MAT 281E - Linear Algebra and Applications</li>
+				<li>BLG 113E - Intr.toComp.Eng.and Ethics</li>
+				<li>MAT 103E - Mathematics I</li>
+		</div>
+		<h2 id="Skills" >Skills</h2>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Archery</li>
+			</ul>
+		<h2 id="Languages" >Languages</h2>
+			<ul>
+				<li>Turkish</li>
+				<li>English</li>
+			</ul>
+		<h2 id="Hobbies" >Hobbies</h2>
+			<ul>
+				<li>Graphic Design</li>
+				<li>Coding</li>
+				<li>Hiking</li>
+			</ul>
 	</body>
 </html>
-		
